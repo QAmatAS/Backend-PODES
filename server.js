@@ -43,17 +43,17 @@ app.use((req, res, next) => {
 });
 
 // Routes
-// app.use('/api/villages', villageRoutes);
+app.use('/api/villages', villageRoutes);
 
 // test routes
-app.use('/api/villages', (req, res) => {
-  res.json({
-    status: 'OK',
-    message: 'PODES Batu API Server is running',
-    timestamp: new Date().toISOString(),
-    dataCount: podesData.length
-  });
-});
+// app.use('/api/villages', (req, res) => {
+//   res.json({
+//     status: 'OK',
+//     message: 'PODES Batu API Server is running',
+//     timestamp: new Date().toISOString(),
+//     dataCount: podesData.length
+//   });
+// });
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
